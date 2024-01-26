@@ -1,0 +1,47 @@
+<div class="product-form-container">
+    <h1>
+        Novo Produto
+    </h1>
+
+    <form id="product-form" [formGroup]="productForm()" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput name="name" formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput name="description" formControlName="description" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Preço</mat-label>
+            <input matInput name="price" formControlName="price" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Quantidade</mat-label>
+            <input type="number" name="amount" formControlName="amount" matInput required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Imagem URL</mat-label>
+            <input type="url" name="imageUrl" formControlName="imageUrl" matInput required>
+        </mat-form-field>
+
+        @if(!productForm().valid) {
+            <mat-error>
+                Preencha todos os campos.
+            </mat-error>
+        }
+    </form>
+
+    <footer>
+        <button mat-raised-button color="warn" (click)="closeForm()">
+            Cancelar
+        </button>
+        <button mat-raised-button color="primary" form="product-form" type="submit">
+            Salvar
+        </button>
+    </footer>
+</div>
