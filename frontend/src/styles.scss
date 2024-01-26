@@ -1,0 +1,32 @@
+:root {
+    --white-color: #FDFAFD;
+    --lightest-green:#DEEFE7; 
+    --light-green: #159A9C;
+    --dark-green: #002333;
+    --light-grey: #B4BEC9;
+
+    --font-default: 'Open Sans', sans-serif;
+}
+
+* {
+    font-family: var(--font-default);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--white-color);
+    text-decoration: none;
+    font: normal 500 1.2rem var(--font-default);
+}
