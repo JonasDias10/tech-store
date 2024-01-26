@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  tech-store-backend:
+    image: tech-store-backend:latest
+    volumes:
+      - "tech-store:/var/lib/app/data/backend"
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/tech-store
+    depends_on:
+      - postgres-db
+
+  tech-store-frontend:
+    image: tech-store-frontend:latest
+    volumes:
+      - "tech-store:/var/lib/app/data/frontend"
+    ports:
+      - "4200:4200"
+    depends_on:
+      - tech-store-backend
+
+  postgres-db:
+    image: postgres:16
+    volumes:
+      - "tech-store:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: tech-store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+volumes:
+  tech-store:
+    external: true
