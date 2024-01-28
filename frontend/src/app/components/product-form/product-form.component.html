@@ -6,17 +6,17 @@
     <form id="product-form" [formGroup]="productForm()" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="fill">
             <mat-label>Nome</mat-label>
-            <input matInput name="name" formControlName="name" required>
+            <input type="text" name="name" formControlName="name" matInput required>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Descrição</mat-label>
-            <textarea matInput name="description" formControlName="description" required></textarea>
+            <textarea name="description" formControlName="description" matInput required></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Preço</mat-label>
-            <input matInput name="price" formControlName="price" required>
+            <input type="number" name="price" formControlName="price" matInput required>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
