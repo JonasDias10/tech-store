@@ -1,0 +1,22 @@
+footer {
+    background: var(--light-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 4rem;
+}
+
+footer ul {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+}
+
+footer ul img {
+    width: 3rem;
+    height: 3rem;
+}
+
+footer p {
+    font: normal 500 1rem var(--font-default);
+}
