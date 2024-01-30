@@ -1,0 +1,16 @@
+<div class="product-container">
+  <header>
+    <h1>
+      Produtos
+    </h1>
+    <button mat-raised-button (click)="openForm()">
+      Novo Produto
+    </button>
+  </header>
+
+  @if (isProductFormOpen()) {
+    <app-product-form></app-product-form>
+  }
+
+  <app-product-table></app-product-table>
+</div>
