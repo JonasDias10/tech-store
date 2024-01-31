@@ -1,5 +1,6 @@
 .product-container {
     padding: 2rem 4rem;
+    min-height: calc(100vh - 15rem);
 }
 
 .product-container header {
@@ -15,4 +16,16 @@
 
 .product-container table {
     width: 100%;
+}
+
+@media(max-width: 560px) {
+    .product-container {
+        padding: 2rem 1rem;
+    }
+
+    .product-container header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
