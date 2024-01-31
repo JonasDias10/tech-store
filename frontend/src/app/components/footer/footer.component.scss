@@ -4,6 +4,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 4rem;
+    height: 7rem;
 }
 
 footer ul {
@@ -19,4 +20,18 @@ footer ul img {
 
 footer p {
     font: normal 500 1rem var(--font-default);
+}
+
+@media(max-width: 560px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 8rem;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
 }
