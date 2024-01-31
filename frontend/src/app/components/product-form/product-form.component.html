@@ -6,12 +6,12 @@
     <form id="product-form" [formGroup]="productForm()" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="fill">
             <mat-label>Nome</mat-label>
-            <input type="text" name="name" formControlName="name" matInput required>
+            <input type="text" name="name" formControlName="name" matInput maxlength="255" required>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Descrição</mat-label>
-            <textarea name="description" formControlName="description" matInput required></textarea>
+            <textarea name="description" formControlName="description" matInput maxlength="255" required></textarea>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -26,7 +26,7 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Imagem URL</mat-label>
-            <input type="url" name="imageUrl" formControlName="imageUrl" matInput required>
+            <input type="url" name="imageUrl" formControlName="imageUrl" matInput maxlength="255" required>
         </mat-form-field>
 
         @if(!productForm().valid) {
@@ -40,7 +40,7 @@
         <button mat-raised-button color="warn" (click)="closeForm()">
             Cancelar
         </button>
-        <button mat-raised-button color="primary" form="product-form" type="submit">
+        <button mat-raised-button color="primary" form="product-form" type="submit" [disabled]="!productForm().valid">
             Salvar
         </button>
     </footer>

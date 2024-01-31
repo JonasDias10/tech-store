@@ -30,22 +30,20 @@ export class ProductFormService {
   createProductForm(): void {
     this.productForm = this.formBuilder.group({
       id: [''],
-      name: ['', Validators.required],
-      description: ['', Validators.required],
+      name: ['', [Validators.required, Validators.maxLength(255)]],
+      description: ['', [Validators.required, Validators.maxLength(255)]],
       price: ['', Validators.required],
       amount: ['', Validators.required],
-      imageUrl: ['', Validators.required]
+      imageUrl: ['', [Validators.required, Validators.maxLength(255)]],
     });
   }
 
   submitForm() {
-    if (this.productForm.valid) {
-      this.productService.save(this.productForm.value);
-      this.productForm.reset();
-      this.closeForm();
+    this.productService.save(this.productForm.value);
+    this.productForm.reset();
+    this.closeForm();
       
-      setTimeout(() => this.refresh(), 1000);
-    }
+    setTimeout(() => this.refresh(), 1000);
   }
   
   private refresh() {
