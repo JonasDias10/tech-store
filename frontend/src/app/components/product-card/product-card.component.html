@@ -7,7 +7,10 @@
             {{product.description}}
         </mat-card-subtitle>
     </mat-card-header>
+        <img mat-card-xl-image src={{product.imageUrl}} alt={{product.description}}>
     <mat-card-content>
-        <img mat-card-image src={{product.imageUrl}} alt={{product.description}}>
+        <p class="product-price">
+            {{getFormattedPrice()}}
+        </p>
     </mat-card-content>
 </mat-card>

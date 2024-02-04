@@ -14,5 +14,12 @@ export class ProductCardComponent {
   @Input() product!: Product;
 
   constructor() { }
+
+  getFormattedPrice(): string {
+    return this.product.price.toLocaleString('pt-br', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+  }
   
 }
