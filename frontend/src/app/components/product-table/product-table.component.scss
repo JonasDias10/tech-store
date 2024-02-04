@@ -1,4 +1,8 @@
 .product-table-container {
+    padding: 0.4rem 0;
+}
+
+.product-table-container .table-scroll {
     overflow-y: scroll;
-    max-height: 22rem;
+    max-height: 18rem;
 }
