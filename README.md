@@ -1,6 +1,6 @@
 # Tech Store
 
-### This Tech Store app integrates Spring Boot for the backend, Angular for the frontend, and PostgreSQL as the database. The backend strictly follows Clean Architecture principles, ensuring a modular and easy-to-maintain code base. Docker is employed to containerize the entire project for easy deployment.
+#### This Tech Store app integrates Spring Boot for the backend, Angular for the frontend, and PostgreSQL as the database. The backend strictly follows Clean Architecture principles, ensuring a modular and easy-to-maintain code base. Docker is employed to containerize the entire project for easy deployment.
 
 ![Tech Store GIF](./media/tech-store.gif)
 
